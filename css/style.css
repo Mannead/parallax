@@ -329,7 +329,7 @@ h1 {
 }
 
 .contact-button:hover {
-    color: #1d002c;
+    color: var(--violet);
 }
 
 @keyframes slideIn {
