@@ -1,0 +1,343 @@
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --white: #fff;
+    --aqua: #12f7ff;
+    --violet: #1d002c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--violet);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 25px 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.header__menu {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.header__menu a {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 25px;
+    border: 2px solid var(--aqua);
+    transition: all 0.3s ease;
+}
+
+.header__menu a:hover {
+    color: var(--violet);
+    background: var(--aqua);
+    box-shadow: 0 0 1rem var(--aqua);
+}
+
+section {
+    min-height: 100vh;
+}
+
+.home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+}
+
+.home img {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 0 7px 5px rgba(0,0,0,0.85);
+    left: 3%;
+    top: 80%;
+}
+
+#moon, #desert-moon {
+    mix-blend-mode: screen;
+}
+
+.about {
+    position: relative;
+}
+
+.info-box {
+    position: absolute;
+    z-index: 1003;
+    top: 0%;
+    left: 10%;
+    width: 50%;
+    background: var(--violet);
+}
+
+.info-box h2 {
+    font-size: 2.3rem;
+}
+
+.info-box p {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.btn {
+    background: var(--aqua);
+    color: var(--violet);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--aqua);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem var(--aqua);
+    background: var(--violet);
+    color: var(--white);
+}
+
+.about img {
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#waterfall {
+    position: absolute;
+    top: -95px;
+}
+
+
+
+/*cartochki producta(ribki?)*/
+
+h1 {
+    color: var(--white);
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products {
+    padding-bottom: 5px;
+    margin-top: 200px;
+    height: 30%;
+}
+.product-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--violet);
+    border: 2px solid var(--aqua);
+    border-radius: 20px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px var(--aqua);
+    transform: translateY(-5px);
+}
+
+.fish-image {
+    width: 100px;
+    height: 100px;
+    margin-top: -60px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--aqua);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 14px;
+    color: var(--white);
+    margin: 15px 0;
+}
+
+.shop-btn {
+    color: #1d002c;
+    background-color: var(--aqua);
+    border: 2px solid var(--aqua);
+    border-radius: 999px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    position: relative;
+}
+
+.shop-btn:hover {
+    box-shadow: 0 0 10px var(--aqua), 0 0 20px var(--aqua), 0 0 40px var(--aqua);
+    background-color: var(--violet);
+    color: var(--aqua);
+}
+
+
+
+
+
+/*contaktiki*/
+
+.contact-section {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--violet);
+    margin-top: -200px;
+}
+
+.contact-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--aqua);
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--white);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--aqua);
+}
+
+.address {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.contact-button {
+    background-color: transparent;
+    color: var(--aqua);
+    border: 2px solid var(--aqua);
+    padding: 10px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--aqua);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.contact-button:hover::before {
+    left: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.contact-button:hover {
+    color: #1d002c;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
